@@ -39,11 +39,17 @@ function clear() {
 };
 
 
+//define updatePage function
 
 $("#run-search").on("click", function (event) {
     event.preventDefault();
     clear();
-    buildQueryURL()
+    var indivsearchURL = buildQueryURL();
+
+    $.ajax({
+        url: indivsearchURL,
+        method: "GET"
+    }).then(updatePage);
 });
 
 
