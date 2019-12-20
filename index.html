@@ -111,19 +111,21 @@
     </div>
 
     <script>
-        var searchterm = $(this).attr("data-name");
-        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?t=" + searchterm + "&api-key=ISIuRoxErOd0pVSE6l9jL9V52oWkuhFP";
+        function displaysearch() {
+            var searchterm = $(this).attr("data-name");
+            var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?t=" + searchterm + "&api-key=ISIuRoxErOd0pVSE6l9jL9V52oWkuhFP";
 
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (response).response {
-
-
-        }
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            }).then(function (response).response {
 
 
+            }
 
+
+            )
+        };
     </script>
 
     <!-- jQuery JS -->
