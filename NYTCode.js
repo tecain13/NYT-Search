@@ -13,19 +13,19 @@ function usersearch() {
     }
 
     )
-
-    $("#run-search").on("click", function () {
-        var searchterm = $("#seach-term").val().trim();
-        var startyear = $("#start-year").val().trim();
-        var endyear = $("#end-year").val().trim();
-
-        console.log(searchterm);
-        console.log(startyear);
-        console.log(endyear);
-    });
-
 };
 
-
 usersearch()
+
+$("#run-search").on("click", function (event) {
+    event.preventDefault();
+    var searchterm = $("#search-term").val().trim();
+    var startyear = $("#start-year").val().trim();
+    var endyear = $("#end-year").val().trim();
+
+    console.log(searchterm);
+    console.log(startyear);
+    console.log(endyear);
+});
+
 
