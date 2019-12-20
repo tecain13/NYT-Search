@@ -12,8 +12,20 @@ function usersearch() {
             ;
     }
 
-
     )
+
+    $("#run-search").on("click", function () {
+        var searchterm = $("#seach-term").val().trim();
+        var startyear = $("#start-year").val().trim();
+        var endyear = $("#end-year").val().trim();
+
+        console.log(searchterm);
+        console.log(startyear);
+        console.log(endyear);
+    });
+
 };
 
+
 usersearch()
+
